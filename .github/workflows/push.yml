@@ -19,4 +19,4 @@ jobs:
           aws-region: us-east-1
           
       - name: Deploy
-        run: aws s3 sync . s3://logoscode.com.mx --exclude .github/ --only-show-errors
+        run: aws s3 sync . s3://logoscode.com.mx --exclude ".git/*" --exclude ".github/*" --delete --only-show-errors
