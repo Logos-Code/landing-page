@@ -1,0 +1,106 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
+}
+
+#home {
+	position: relative;
+	background-color: black;
+	height: 100%;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+}
+
+#home video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#home .container {
+	position: relative;
+	z-index: 2;
+}
+
+#home .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+	#home video {
+		display: none;
+	}
+}
+
+#potencyText:before {
+	content: "";
+	white-space: pre;
+	animation: animateTextList infinite 16s;
+	text-decoration: underline dotted;
+}
+
+@keyframes animateTextList {
+	0% {
+		content: "Software"
+	}
+	20% {
+		content: "Infraestructura"
+	}
+	40% {
+		content: "Aplicación"
+	}
+	60% {
+		content: "Proceso"
+	}
+	80% {
+		content: "Idea"
+	}
+	100% {
+		content: "Servicio"
+	}
+}
+
+.list-service-titles:hover {
+	cursor: pointer;
+}
+
+.scrollable {
+	/* position: absolute; */
+    overflow-y: scroll;
+}
+
+#us {
+	background-image: url("../img/shutterstock_1935833692.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#services {
+	background-image: url("../img/fondo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
