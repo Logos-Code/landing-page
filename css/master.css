@@ -9,6 +9,15 @@ body {
 	scroll-behavior: smooth;
 }
 
+.no-overflow {
+	overflow: hidden;
+}
+
+#overlay {
+	z-index: 999999;
+	position: fixed;
+}
+
 #homeVideo {
 	object-fit: cover;
 	position: absolute;

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 
-<body class="bg-dark text-white" data-spy="scroll" data-target="#navbar" data-offset="50">
+<body class="bg-dark text-white no-overflow" data-spy="scroll" data-target="#navbar" data-offset="50">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent" id="navbar">
         <a class="navbar-brand p-0" href="#home">
             <img id="navbarLogo" style="display: none" src="./img/logoscodehorizontal.png" height="30" alt="">
@@ -42,8 +42,26 @@
         </div>
     </nav>
 
+    <div id="overlay" class="w-100 h-100 bg-dark">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center text-center">
+                <div class="col">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                      </div>
+                      <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                      </div>
+                      <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="w-100 h-100" id="home">
-        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo"></video>
+        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo" oncanplay="$('#overlay').hide(500);"></video>
 
         <div class="container h-100" id="homeContainer">
             <div class="row h-100 text-center align-items-center">
