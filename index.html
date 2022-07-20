@@ -29,12 +29,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#home">Inicio</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#us">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Servicios</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contacto</a>
                 </li>
@@ -43,13 +43,9 @@
     </nav>
 
     <section class="w-100 h-100" id="home">
-        <div class="overlay"></div>
+        <div class="overlay" style="background-color: black;"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <!-- <source src="./img/Space - 2381.mp4" type="video/mp4"> -->
-            <!-- <source src="./img/Starry Sky - 30356.mp4" type="video/mp4"> -->
-            <!-- <source src="./img/Stars - 6962.mp4" type="video/mp4"> -->
-            <source src="./img/Nebula - 24623.mp4" type="video/mp4">
-            <!-- <source src="./img/Wormhole - 6797.mp4" type="video/mp4"> -->
+            <source src="./img/home_bg.mp4" type="video/mp4">
         </video>
 
         <div class="container h-100">
@@ -71,23 +67,25 @@
         </div>
     </section>
 
-    <section class="w-100 h-100" style="background-color: #0e1318;" id="us">
+    <!-- <section class="w-100 h-100" style="background-color: #0e1318;" id="us">
         <div class="container-fluid h-100">
             <div class="row h-100 p-5 text-white text-center">
                 <div class="col-12 col-lg-6 p-lg-5">
                     <p class="h3 text-uppercase text-primary">SOMOS TU MEJOR OPCIÓN</p>
                     <p class="h5 text-uppercase">
-                        Somos una propuesta mexicana que busca implementar soluciones accesibles y correctas a tus oportunidades, sean grandes o pequeñas, ofrecemos los mejores planes, así cómo migración a la nube y sistemas que automaticen tus necesidades.
+                        Somos una propuesta mexicana que busca implementar soluciones accesibles y correctas a tus
+                        oportunidades, sean grandes o pequeñas, ofrecemos los mejores planes, así cómo migración a la
+                        nube y sistemas que automaticen tus necesidades.
                     </p>
                 </div>
                 <div class="col-lg-6">
-                    <!-- <img src="./img/computer.png" class="img-fluid w-100"> -->
+                    <img src="./img/computer.png" class="img-fluid w-100">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="w-100 h-100 p-5" id="services">
+    <!-- <section class="w-100 h-100 p-5" id="services">
         <div class="container-fluid pt-5 pb-4 w-100 h-100">
             <div class="row">
                 <div class="col text-center align-items-center">
@@ -97,13 +95,26 @@
             <div class="row h-100 scrollable">
                 <div class="col-2 px-0 border-right-1">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-service-titles b-rt-0 active" onclick="showServices('all', 'serviceAllTitle');" id="serviceAllTitle">Mostrar todos</li>
-                        <li class="list-group-item list-service-titles" onclick="showServices('serviceDevops', 'serviceDevopsTitle');" id="serviceDevopsTitle">DevOps</li>
-                        <li class="list-group-item list-service-titles" onclick="showServices('serviceBackend', 'serviceBackendTitle');" id="serviceBackendTitle">Backend</li>
-                        <li class="list-group-item list-service-titles" onclick="showServices('serviceFrontend', 'serviceFrontendTitle');" id="serviceFrontendTitle">Frontend</li>
-                        <li class="list-group-item list-service-titles b-rb-0" onclick="showServices('serviceMovil', 'serviceMovilTitle');" id="serviceMovilTitle">Moviles</li>
-                        <li class="list-group-item list-service-titles b-rb-0" onclick="showServices('serviceAnalisis', 'serviceAnalisisTitle');" id="serviceAnalisisTitle">Análisis de datos</li>
-                        <li class="list-group-item list-service-titles b-rb-0" onclick="showServices('serviceAutomation', 'serviceAutomationTitle');" id="serviceAutomationTitle">Automatización</li>
+                        <li class="list-group-item list-service-titles b-rt-0 active"
+                            onclick="showServices('all', 'serviceAllTitle');" id="serviceAllTitle">Mostrar todos</li>
+                        <li class="list-group-item list-service-titles"
+                            onclick="showServices('serviceDevops', 'serviceDevopsTitle');" id="serviceDevopsTitle">
+                            DevOps</li>
+                        <li class="list-group-item list-service-titles"
+                            onclick="showServices('serviceBackend', 'serviceBackendTitle');" id="serviceBackendTitle">
+                            Backend</li>
+                        <li class="list-group-item list-service-titles"
+                            onclick="showServices('serviceFrontend', 'serviceFrontendTitle');"
+                            id="serviceFrontendTitle">Frontend</li>
+                        <li class="list-group-item list-service-titles b-rb-0"
+                            onclick="showServices('serviceMovil', 'serviceMovilTitle');" id="serviceMovilTitle">Moviles
+                        </li>
+                        <li class="list-group-item list-service-titles b-rb-0"
+                            onclick="showServices('serviceAnalisis', 'serviceAnalisisTitle');"
+                            id="serviceAnalisisTitle">Análisis de datos</li>
+                        <li class="list-group-item list-service-titles b-rb-0"
+                            onclick="showServices('serviceAutomation', 'serviceAutomationTitle');"
+                            id="serviceAutomationTitle">Automatización</li>
                     </ul>
                 </div>
                 <div class="col-4 px-0">
@@ -112,51 +123,66 @@
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">DevOps</h5>
                             </div>
-                            <p class="mb-1">Trabajamos con AWS, Azure, Jenkins, Kubernetes, Docker y demás tecnologías para automatizar toda tu infraestructura.</p>
+                            <p class="mb-1">Trabajamos con AWS, Azure, Jenkins, Kubernetes, Docker y demás tecnologías
+                                para automatizar toda tu infraestructura.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action service-item" id="serviceBackend">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Backend</h5>
                             </div>
-                            <p class="mb-1">Conocemos y usamos las mejores tecnologías para back-end con arquitecturas robustas y buenas prácticas.</p>
+                            <p class="mb-1">Conocemos y usamos las mejores tecnologías para back-end con arquitecturas
+                                robustas y buenas prácticas.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action service-item" id="serviceFrontend">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Frontend</h5>
                             </div>
-                            <p class="mb-1">Somos muy buenos con HTML, CSS, Jquery y Bootstrap, conocemos React y Angular, y nos encantaría aumentar nuestra experiencia en un projecto en conjuto usando éstas tecnologías.</p>
+                            <p class="mb-1">Somos muy buenos con HTML, CSS, Jquery y Bootstrap, conocemos React y
+                                Angular, y nos encantaría aumentar nuestra experiencia en un projecto en conjuto usando
+                                éstas tecnologías.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action service-item" id="serviceMovil">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Moviles</h5>
                             </div>
-                            <p class="mb-1">Tenemos dominado el back-end y la infraestructura, despliegue y arquitectura, usamos React Native para ofrecerte la mejor experiencia en aplicaciones móviles pero siempre estamos abiertos a nuevas tecnologías.</p>
+                            <p class="mb-1">Tenemos dominado el back-end y la infraestructura, despliegue y
+                                arquitectura, usamos React Native para ofrecerte la mejor experiencia en aplicaciones
+                                móviles pero siempre estamos abiertos a nuevas tecnologías.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action service-item" id="serviceAnalisis">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Análisis de datos</h5>
                             </div>
-                            <p class="mb-1">Te podemos acompañar desde la fase de levantamiento de requerimientos, establecimiento de tiempos, hasta asesorarte en un refactor de todos tus sistemas o hacerlo.</p>
+                            <p class="mb-1">Te podemos acompañar desde la fase de levantamiento de requerimientos,
+                                establecimiento de tiempos, hasta asesorarte en un refactor de todos tus sistemas o
+                                hacerlo.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action service-item" id="serviceAutomation">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Automatización</h5>
                             </div>
-                            <p class="mb-1"> Siempre hay formas de automatizar procesos y métodos, si sientes que aún puedes automatizar más o necesitas automatizar algo podemos ayudarte.</p>
+                            <p class="mb-1"> Siempre hay formas de automatizar procesos y métodos, si sientes que aún
+                                puedes automatizar más o necesitas automatizar algo podemos ayudarte.</p>
                         </a>
                     </div>
                 </div>
                 <div class="col-6 px-0">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops serviceBackend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops serviceMovil">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceDevops serviceBackend">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceDevops serviceBackend serviceMovil">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceDevops serviceMovil">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
+                    <img src="https://via.placeholder.com/150"
+                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
@@ -168,29 +194,47 @@
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
                     <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- <section class="w-100 h-100" id="services">
-        <div class="d-flex h-100">
-            <div class="w-100">
-                
-                <div class="container">
-                    <div class="row">
-                        
-                    </div>
                 </div>
             </div>
         </div>
     </section> -->
 
-    <section class="w-100 h-100" id="contact">
-        <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
-                <p class="h1">Contacto</p>
+    <section class="w-100 h-100 bg-dark text-white" id="contact">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col">
+                    <div class="container">
+                        <div class="row h-25">
+                            <div class="col text-center">
+                                <p class="h3">Contáctanos</p>
+                            </div>
+                        </div>
+                        <form id="contactForm">
+                            <div class="row h-75 bg-light p-5 rounded border shadow-lg">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contactName" placeholder="Nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="Correo">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="contactCellphone"
+                                            placeholder="Teléfono">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100" id="contactSubmitBtn">Enviar</button>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group h-100">
+                                        <textarea class="form-control h-100" id="exampleFormControlTextarea1"
+                                            placeholder="Mensaje"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -200,6 +244,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         function scrollToSection(element) {
             $("html, body").animate({
@@ -207,8 +254,8 @@
             }, 1000);
         };
 
-        function showServices(serviceId, serviceTitleId){
-            if( serviceId === "all" ) {
+        function showServices(serviceId, serviceTitleId) {
+            if (serviceId === "all") {
                 $(".service-item, .servicesThumbnails").show(400);
             } else {
                 $(".service-item, .servicesThumbnails").hide(400);
@@ -220,18 +267,18 @@
         }
 
         function elementIsInViewport(element) {
-            return ($( window ).scrollTop() - $(element).offset().top - $(element).height() < 0);
+            return ($(window).scrollTop() - $(element).offset().top - $(element).height() < 0);
         }
 
         $(window).scroll(function () {
-            if ( elementIsInViewport( "#homeLogo" ) ) {
+            if (elementIsInViewport("#homeLogo")) {
                 $("#navbarLogo").hide(1000);
             } else {
                 $("#navbarLogo").show(1000);
             }
         });
 
-        if ( !elementIsInViewport( "#homeLogo" ) ) {
+        if (!elementIsInViewport("#homeLogo")) {
             $("#navbarLogo").show();
         }
 
@@ -239,6 +286,34 @@
             var sectionTo = $(this).attr("href");
             scrollToSection(sectionTo);
         });
+
+        $("#contactForm").submit((evt) => {
+            evt.preventDefault();
+
+            $("#contactForm").submit((evt) => {
+                evt.preventDefault();
+
+                $.ajax({
+                    method: "POST",
+                    headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
+                    url: "https://landing-contact-email.logoscode.com.mx/send",
+                    data: {
+                        name: $("#contactName").val(),
+                        email: $("#contactEmail").val(),
+                        cellphone: $("#contactCellphone").val()
+                    }
+                }).done((data, textStatus, jqXHR) => {
+                    console.log(data, textStatus, jqXHR);
+                }).fail((jqXHR, textStatus, errorThrown) => {
+                    console.log(jqXHR, textStatus, errorThrown);
+                }).always(() => {
+                    document.getElementById("contactForm").reset();
+
+                    $("#contactSubmitBtn").notify("Gracias por tu mensaje", { position:"top center", className: "success" });
+                });
+            });
+
+        })
     </script>
 </body>
 
