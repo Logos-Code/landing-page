@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 
-<body class="bg-dark" data-spy="scroll" data-target="#navbar" data-offset="50">
+<body class="bg-dark text-white" data-spy="scroll" data-target="#navbar" data-offset="50">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent" id="navbar">
         <a class="navbar-brand p-0" href="#home">
             <img id="navbarLogo" style="display: none" src="./img/logoscodehorizontal.png" height="30" alt="">
@@ -43,6 +43,28 @@
     </nav>
 
     <section class="w-100 h-100" id="home">
+        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo"></video>
+
+        <div class="container h-100" id="homeContainer">
+            <div class="row h-100 text-center align-items-center">
+                <div class="col">
+                    <img id="homeLogo" src="./img/logologoscode.png" class="img-fluid w-25 mb-5">
+
+                    <p id="homePrimaryText" class="h3 text-uppercase font-weight-bolder text-primary mt-5">
+                        Desarrollo, arquitectura y automatización
+                    </p>
+                    <p class="h4 text-uppercase mb-5">
+                        para potenciar tu <span class="h4 font-weight-bolder" id="potencyText"></span>
+                    </p>
+
+                    <button class="btn btn-primary btn-lg mt-5"
+                        onclick="scrollToSection('#contact')">Contáctanos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- <section class="w-100 h-100" id="home">
         <div class="overlay"></div>
         <video autoplay loop muted playsinline>
             <source src="./img/home_bg.mp4" type="video/mp4">
@@ -65,9 +87,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- <section class="w-100 h-100" style="background-color: #0e1318;" id="us">
+        <!-- <section class="w-100 h-100" style="background-color: #0e1318;" id="us">
         <div class="container-fluid h-100">
             <div class="row h-100 p-5 text-white text-center">
                 <div class="col-12 col-lg-6 p-lg-5">
@@ -85,7 +107,7 @@
         </div>
     </section> -->
 
-    <!-- <section class="w-100 h-100 p-5" id="services">
+        <!-- <section class="w-100 h-100 p-5" id="services">
         <div class="container-fluid pt-5 pb-4 w-100 h-100">
             <div class="row">
                 <div class="col text-center align-items-center">
@@ -199,122 +221,127 @@
         </div>
     </section> -->
 
-    <section class="w-100 h-100 bg-dark text-white" id="contact">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col">
-                    <div class="container">
-                        <div class="row h-25">
-                            <div class="col text-center">
-                                <p class="h3">Contáctanos</p>
+        <section class="w-100 h-100 bg-dark text-white" id="contact">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col">
+                        <div class="container">
+                            <div class="row h-25">
+                                <div class="col text-center">
+                                    <p class="h3">Contáctanos</p>
+                                </div>
                             </div>
-                        </div>
-                        <form id="contactForm">
-                            <div class="row h-75 bg-light p-5 rounded border shadow-lg">
-                                <div class="col">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contactName" placeholder="Nombre">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="contactEmail" placeholder="Correo">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contactCellphone"
-                                            placeholder="Teléfono">
-                                    </div>
+                            <form id="contactForm">
+                                <div class="row h-75 bg-light p-5 rounded border shadow-lg">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="contactName"
+                                                placeholder="Nombre">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="contactEmail"
+                                                placeholder="Correo">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="contactCellphone"
+                                                placeholder="Teléfono">
+                                        </div>
 
-                                    <button type="submit" class="btn btn-primary w-100" id="contactSubmitBtn">Enviar</button>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group h-100">
-                                        <textarea class="form-control h-100" id="exampleFormControlTextarea1"
-                                            placeholder="Mensaje"></textarea>
+                                        <button type="submit" class="btn btn-primary w-100"
+                                            id="contactSubmitBtn">Enviar</button>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group h-100">
+                                            <textarea class="form-control h-100" id="exampleFormControlTextarea1"
+                                                placeholder="Mensaje"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"
+            integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        function scrollToSection(element) {
-            $("html, body").animate({
-                scrollTop: $(element).offset().top
-            }, 1000);
-        };
+        <script>
+            function scrollToSection(element) {
+                $("html, body").animate({
+                    scrollTop: $(element).offset().top
+                }, 1000);
+            };
 
-        function showServices(serviceId, serviceTitleId) {
-            if (serviceId === "all") {
-                $(".service-item, .servicesThumbnails").show(400);
-            } else {
-                $(".service-item, .servicesThumbnails").hide(400);
-                $("#" + serviceId + ", ." + serviceId).show(400);
+            function showServices(serviceId, serviceTitleId) {
+                if (serviceId === "all") {
+                    $(".service-item, .servicesThumbnails").show(400);
+                } else {
+                    $(".service-item, .servicesThumbnails").hide(400);
+                    $("#" + serviceId + ", ." + serviceId).show(400);
+                }
+
+                $(".list-service-titles").removeClass("active");
+                $("#" + serviceTitleId).addClass("active");
             }
 
-            $(".list-service-titles").removeClass("active");
-            $("#" + serviceTitleId).addClass("active");
-        }
-
-        function elementIsInViewport(element) {
-            return ($(window).scrollTop() - $(element).offset().top - $(element).height() < 0);
-        }
-
-        $(window).scroll(function () {
-            if (elementIsInViewport("#homeLogo")) {
-                $("#navbarLogo").hide(1000);
-            } else {
-                $("#navbarLogo").show(1000);
+            function elementIsInViewport(element) {
+                return ($(window).scrollTop() - $(element).offset().top - $(element).height() < 0);
             }
-        });
 
-        if (!elementIsInViewport("#homeLogo")) {
-            $("#navbarLogo").show();
-        }
+            $(window).scroll(function () {
+                if (elementIsInViewport("#homeLogo")) {
+                    $("#navbarLogo").hide(1000);
+                } else {
+                    $("#navbarLogo").show(1000);
+                }
+            });
 
-        $(".nav-link").click(function () {
-            var sectionTo = $(this).attr("href");
-            scrollToSection(sectionTo);
-        });
+            if (!elementIsInViewport("#homeLogo")) {
+                $("#navbarLogo").show();
+            }
 
-        $("#contactForm").submit((evt) => {
-            evt.preventDefault();
+            $(".nav-link").click(function () {
+                var sectionTo = $(this).attr("href");
+                scrollToSection(sectionTo);
+            });
 
             $("#contactForm").submit((evt) => {
                 evt.preventDefault();
 
-                $.ajax({
-                    method: "POST",
-                    headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
-                    url: "https://landing-contact-email.logoscode.com.mx/send",
-                    data: {
-                        name: $("#contactName").val(),
-                        email: $("#contactEmail").val(),
-                        cellphone: $("#contactCellphone").val()
-                    }
-                }).done((data, textStatus, jqXHR) => {
-                    console.log(data, textStatus, jqXHR);
-                }).fail((jqXHR, textStatus, errorThrown) => {
-                    console.log(jqXHR, textStatus, errorThrown);
-                }).always(() => {
-                    document.getElementById("contactForm").reset();
+                $("#contactForm").submit((evt) => {
+                    evt.preventDefault();
 
-                    $("#contactSubmitBtn").notify("Gracias por tu mensaje", { position:"top center", className: "success" });
+                    $.ajax({
+                        method: "POST",
+                        headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
+                        url: "https://landing-contact-email.logoscode.com.mx/send",
+                        data: {
+                            name: $("#contactName").val(),
+                            email: $("#contactEmail").val(),
+                            cellphone: $("#contactCellphone").val()
+                        }
+                    }).done((data, textStatus, jqXHR) => {
+                        console.log(data, textStatus, jqXHR);
+                    }).fail((jqXHR, textStatus, errorThrown) => {
+                        console.log(jqXHR, textStatus, errorThrown);
+                    }).always(() => {
+                        document.getElementById("contactForm").reset();
+
+                        $("#contactSubmitBtn").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
+                    });
                 });
-            });
 
-        })
-    </script>
+            });
+        </script>
 </body>
 
 </html>
