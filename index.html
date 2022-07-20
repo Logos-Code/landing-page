@@ -27,16 +27,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-pills ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Inicio</a>
+                    <a class="nav-link text-white" href="#home">Inicio</a>
                 </li>
                 <!-- <li class="nav-item">
-                    <a class="nav-link" href="#us">Nosotros</a>
+                    <a class="nav-link text-white" href="#us">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link text-white" href="#services">Servicios</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contacto</a>
+                    <a class="nav-link text-white" href="#contact">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -232,29 +232,26 @@
                                 </div>
                             </div>
                             <form id="contactForm">
-                                <div class="row h-75 bg-light p-5 rounded border shadow-lg">
-                                    <div class="col">
+                                <div class="row h-75 bg-light p-2 p-sm-3 p-md-4 p-lg-5 rounded border shadow-lg">
+                                    <div class="col-12 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="contactName"
-                                                placeholder="Nombre">
+                                            <input type="text" class="form-control" id="contactName" placeholder="Nombre">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="contactEmail"
-                                                placeholder="Correo">
+                                            <input type="email" class="form-control" id="contactEmail" placeholder="Correo">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="contactCellphone"
-                                                placeholder="Teléfono">
+                                            <input type="text" class="form-control" id="contactCellphone" placeholder="Teléfono">
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary w-100"
-                                            id="contactSubmitBtn">Enviar</button>
+                                        <button type="submit" class="btn btn-primary w-100 d-none d-sm-block">Enviar</button>
                                     </div>
-                                    <div class="col">
-                                        <div class="form-group h-100">
-                                            <textarea class="form-control h-100" id="exampleFormControlTextarea1"
-                                                placeholder="Mensaje"></textarea>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="form-group h-sm-100">
+                                            <textarea class="form-control h-sm-100" id="contactMessage" placeholder="Mensaje" rows="5"></textarea>
                                         </div>
+
+                                        <button type="submit" class="btn btn-primary w-100 d-block d-sm-none">Enviar</button>
                                     </div>
                                 </div>
                             </form>
@@ -327,7 +324,8 @@
                         data: {
                             name: $("#contactName").val(),
                             email: $("#contactEmail").val(),
-                            cellphone: $("#contactCellphone").val()
+                            cellphone: $("#contactCellphone").val(),
+                            message: $("#contactMessage").val()
                         }
                     }).done((data, textStatus, jqXHR) => {
                         console.log(data, textStatus, jqXHR);
@@ -336,7 +334,7 @@
                     }).always(() => {
                         document.getElementById("contactForm").reset();
 
-                        $("#contactSubmitBtn").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
+                        $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
                     });
                 });
 
