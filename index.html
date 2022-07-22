@@ -59,7 +59,9 @@
     </div>
 
     <section class="w-100 h-100" id="home">
-        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo" oncanplay="$('#overlay').hide(1000);"></video>
+        <video class="w-100 h-100" autoplay loop playsinline muted id="homeVideo" oncanplay="$('#overlay').hide(500);">
+            <source src="./img/home_bg.mp4" type="video/mp4">
+        </video>
 
         <div class="container h-100" id="homeContainer">
             <div class="row h-100 text-center align-items-center">
