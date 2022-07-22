@@ -7,6 +7,7 @@ body {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	scroll-behavior: smooth;
+	background-color: black;
 }
 
 .no-overflow {
@@ -16,6 +17,7 @@ body {
 #overlay {
 	z-index: 999999;
 	position: fixed;
+	background-color: black;
 }
 
 #homeVideo {
