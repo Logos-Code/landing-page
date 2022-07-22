@@ -8,10 +8,6 @@
     <title>LogosCode - Servicios tecnológicos</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
@@ -63,7 +59,7 @@
     </div>
 
     <section class="w-100 h-100" id="home">
-        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo" oncanplaythrough="$('#overlay').hide(1000, () => { $('#overlay').remove(); });" poster="fondo.jpg"></video>
+        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo"></video>
 
         <div class="container h-100" id="homeContainer">
             <div class="row h-100 text-center align-items-center">
@@ -285,83 +281,10 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"
-        integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script>
-        function scrollToSection(element) {
-            $("html, body").animate({
-                scrollTop: $(element).offset().top
-            }, 1000);
-        };
-
-        function showServices(serviceId, serviceTitleId) {
-            if (serviceId === "all") {
-                $(".service-item, .servicesThumbnails").show(400);
-            } else {
-                $(".service-item, .servicesThumbnails").hide(400);
-                $("#" + serviceId + ", ." + serviceId).show(400);
-            }
-
-            $(".list-service-titles").removeClass("active");
-            $("#" + serviceTitleId).addClass("active");
-        }
-
-        function elementIsInViewport(element) {
-            return ($(window).scrollTop() - $(element).offset().top - $(element).height() < 0);
-        }
-
-        $(window).scroll(function () {
-            if (elementIsInViewport("#homeLogo")) {
-                $("#navbarLogo").hide(1000);
-            } else {
-                $("#navbarLogo").show(1000);
-            }
-        });
-
-        if (!elementIsInViewport("#homeLogo")) {
-            $("#navbarLogo").show();
-        }
-
-        $(".nav-link").click(function () {
-            var sectionTo = $(this).attr("href");
-            scrollToSection(sectionTo);
-        });
-
-        $("#contactForm").submit((evt) => {
-            evt.preventDefault();
-
-            $("#contactForm").submit((evt) => {
-                evt.preventDefault();
-
-                $.ajax({
-                    method: "POST",
-                    headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
-                    url: "https://landing-contact-email.logoscode.com.mx/send",
-                    data: {
-                        name: $("#contactName").val(),
-                        email: $("#contactEmail").val(),
-                        cellphone: $("#contactCellphone").val(),
-                        message: $("#contactMessage").val()
-                    }
-                }).done((data, textStatus, jqXHR) => {
-                    console.log(data, textStatus, jqXHR);
-                }).fail((jqXHR, textStatus, errorThrown) => {
-                    console.log(jqXHR, textStatus, errorThrown);
-                }).always(() => {
-                    document.getElementById("contactForm").reset();
-
-                    $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
-                });
-            });
-
-        });
-    </script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/notify.min.js"></script>
+    <script src="./js/master.js"></script>
 </body>
 
 </html>
