@@ -42,7 +42,7 @@ $("#contactForm").on("submit", (evt) => {
 
     $.ajax({
         method: "POST",
-        headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
+        headers: {"Access-Control-Allow-Origin": "*", "x-api-key": "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS"},
         url: "https://landing-contact-email.logoscode.com.mx/send",
         data: {
             name: $("#contactName").val(),
