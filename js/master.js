@@ -60,9 +60,3 @@ $("#contactForm").on("submit", (evt) => {
         $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
     });
 });
-
-$(() => {
-    $("#homeVideo").on("playing", () => {
-        $("#overlay").hide(1000, () => { $("#overlay").remove(); });
-    });
-});
