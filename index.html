@@ -63,7 +63,7 @@
     </div>
 
     <section class="w-100 h-100" id="home">
-        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo" onplay="$('#overlay').hide(1000, () => { $('#overlay').remove(); });"></video>
+        <video class="w-100 h-100" src="./img/home_bg.mp4" autoplay loop playsinline muted id="homeVideo" oncanplaythrough="$('#overlay').hide(1000, () => { $('#overlay').remove(); });" poster="fondo.jpg"></video>
 
         <div class="container h-100" id="homeContainer">
             <div class="row h-100 text-center align-items-center">
