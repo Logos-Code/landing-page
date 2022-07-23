@@ -42,7 +42,11 @@ $("#contactForm").on("submit", (evt) => {
 
     $.ajax({
         method: "POST",
-        headers: {"Access-Control-Allow-Origin": "*", "x-api-key": "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS"},
+        headers: {
+            "Access-Control-Allow-Origin": "https://logoscode.com.mx",
+            "Access-Control-Allow-Headers": "*"
+        },
+        crossDomain: true,
         url: "https://landing-contact-email.logoscode.com.mx/send",
         data: {
             name: $("#contactName").val(),
@@ -60,3 +64,5 @@ $("#contactForm").on("submit", (evt) => {
         $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
     });
 });
+
+// $(() => { });
