@@ -12,6 +12,9 @@
 
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+
+    </style>
 </head>
 
 <body class="bg-dark" data-spy="scroll" data-target="#navbar" data-offset="50">
@@ -31,10 +34,10 @@
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#us">Nosotros</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Servicios</a>
-                </li> -->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contacto</a>
                 </li>
@@ -85,119 +88,156 @@
         </div>
     </section> -->
 
-    <!-- <section class="w-100 h-100 p-5" id="services">
+    <section class="w-100 h-100 p-5" id="services">
         <div class="container-fluid pt-5 pb-4 w-100 h-100">
             <div class="row">
                 <div class="col text-center align-items-center">
-                    <p class="h1 text-primary text-uppercase">¿Cómo lo hacemos?</p>
+                    <p class="h1 text-primary text-uppercase">Nuestros servicios</p>
                 </div>
             </div>
-            <div class="row h-100 scrollable">
-                <div class="col-2 px-0 border-right-1">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-service-titles b-rt-0 active"
-                            onclick="showServices('all', 'serviceAllTitle');" id="serviceAllTitle">Mostrar todos</li>
-                        <li class="list-group-item list-service-titles"
-                            onclick="showServices('serviceDevops', 'serviceDevopsTitle');" id="serviceDevopsTitle">
-                            DevOps</li>
-                        <li class="list-group-item list-service-titles"
-                            onclick="showServices('serviceBackend', 'serviceBackendTitle');" id="serviceBackendTitle">
-                            Backend</li>
-                        <li class="list-group-item list-service-titles"
-                            onclick="showServices('serviceFrontend', 'serviceFrontendTitle');"
-                            id="serviceFrontendTitle">Frontend</li>
-                        <li class="list-group-item list-service-titles b-rb-0"
-                            onclick="showServices('serviceMovil', 'serviceMovilTitle');" id="serviceMovilTitle">Moviles
-                        </li>
-                        <li class="list-group-item list-service-titles b-rb-0"
-                            onclick="showServices('serviceAnalisis', 'serviceAnalisisTitle');"
-                            id="serviceAnalisisTitle">Análisis de datos</li>
-                        <li class="list-group-item list-service-titles b-rb-0"
-                            onclick="showServices('serviceAutomation', 'serviceAutomationTitle');"
-                            id="serviceAutomationTitle">Automatización</li>
-                    </ul>
-                </div>
-                <div class="col-4 px-0">
-                    <div class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceDevops">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">DevOps</h5>
-                            </div>
-                            <p class="mb-1">Trabajamos con AWS, Azure, Jenkins, Kubernetes, Docker y demás tecnologías
-                                para automatizar toda tu infraestructura.</p>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceBackend">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Backend</h5>
-                            </div>
-                            <p class="mb-1">Conocemos y usamos las mejores tecnologías para back-end con arquitecturas
-                                robustas y buenas prácticas.</p>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceFrontend">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Frontend</h5>
-                            </div>
-                            <p class="mb-1">Somos muy buenos con HTML, CSS, Jquery y Bootstrap, conocemos React y
-                                Angular, y nos encantaría aumentar nuestra experiencia en un projecto en conjuto usando
-                                éstas tecnologías.</p>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceMovil">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Moviles</h5>
-                            </div>
-                            <p class="mb-1">Tenemos dominado el back-end y la infraestructura, despliegue y
-                                arquitectura, usamos React Native para ofrecerte la mejor experiencia en aplicaciones
-                                móviles pero siempre estamos abiertos a nuevas tecnologías.</p>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceAnalisis">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Análisis de datos</h5>
-                            </div>
-                            <p class="mb-1">Te podemos acompañar desde la fase de levantamiento de requerimientos,
-                                establecimiento de tiempos, hasta asesorarte en un refactor de todos tus sistemas o
-                                hacerlo.</p>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action service-item" id="serviceAutomation">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Automatización</h5>
-                            </div>
-                            <p class="mb-1"> Siempre hay formas de automatizar procesos y métodos, si sientes que aún
-                                puedes automatizar más o necesitas automatizar algo podemos ayudarte.</p>
-                        </a>
+            <div class="row scrollable" style="height: 400px;">
+                <div style="height: 50px; color: white; margin: 0 auto;">
+                    <div class="buttonTech" onclick="showServices('all', 'serviceAllTitle');"
+                        id="serviceAllTitle">
+                        Mostrar todos
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceDevops', 'serviceDevopsTitle');"
+                        id="serviceDevopsTitle">
+                        DevOps
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceBackend', 'serviceBackendTitle');"
+                        id="serviceBackendTitle">
+                        Backend
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceFrontend', 'serviceFrontendTitle');"
+                        id="serviceFrontendTitle">
+                        Frontend
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceMovile', 'serviceMovileTitle');"
+                        id="serviceMovilTitle">
+                        Moviles
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceAnalisis', 'serviceAnalisisTitle');"
+                        id="serviceAnalisisTitle">
+                        Análisis de datos
+                    </div>
+                    <div class="buttonTech" onclick="showServices('serviceAutomation', 'serviceAutomationTitle');"
+                        id="serviceAutomationTitle">
+                        Automatización
                     </div>
                 </div>
-                <div class="col-6 px-0">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceDevops serviceBackend">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceDevops serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceDevops serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceDevops">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150"
-                        class="img-thumbnail servicesThumbnails serviceBackend serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceBackend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceFrontend">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail servicesThumbnails serviceMovil">
+                <div class="" style="float: left; clear:both; color: white; width: 1000px; margin: 0 auto;">
+
+                    <div class="cardTechnology notVisible" id="serviceDevops">
+                        <div class="">
+                            <h5 class="mb-1">DevOps</h5>
+                        </div>
+                        <p class="mb-1">Trabajamos con AWS, Azure, Jenkins, Kubernetes, Docker y demás tecnologías para
+                            automatizar toda tu infraestructura.</p>
+                    </div>
+                    <div class="cardTechnology notVisible" id="serviceBackend">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Backend</h5>
+                        </div>
+                        <p class="mb-1">Conocemos y usamos las mejores tecnologías para back-end con arquitecturas
+                            robustas y buenas prácticas.</p>
+                    </div>
+                    <div class="cardTechnology notVisible" id="serviceFrontend">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Frontend</h5>
+                        </div>
+                        <p class="mb-1">Somos muy buenos con HTML, CSS, Jquery y Bootstrap, conocemos React y Angular, y
+                            nos encantaría aumentar nuestra experiencia en un projecto en conjuto usando éstas
+                            tecnologías.</p>
+                    </div>
+                    <div class="cardTechnology notVisible" id="serviceMovile">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Moviles</h5>
+                        </div>
+                        <p class="mb-1">Tenemos dominado el back-end y la infraestructura, despliegue y arquitectura,
+                            usamos React Native para ofrecerte la mejor experiencia en aplicaciones móviles pero siempre
+                            estamos abiertos a nuevas tecnologías.</p>
+                    </div>
+                    <div class="cardTechnology notVisible" id="serviceAnalisis">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Análisis de datos</h5>
+                        </div>
+                        <p class="mb-1">Te podemos acompañar desde la fase de levantamiento de requerimientos,
+                            establecimiento de tiempos, hasta asesorarte en un refactor de todos tus sistemas o hacerlo.
+                        </p>
+                    </div>
+                    <div class="cardTechnology notVisible" id="serviceAutomation">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Automatización</h5>
+                        </div>
+                        <p class="mb-1"> Siempre hay formas de automatizar procesos y métodos, si sientes que aún puedes
+                            automatizar más o necesitas automatizar algo podemos ayudarte.</p>
+                    </div>
+
+                </div>
+                <div class="" style="float: left; clear:both; width: 1000px; height: auto; margin: 0 auto;">
+                    <!-- Backend -->
+                    <div title="Microsoft .NET"  class="imgServices serviceBackend" style="background: url(img/technologies/back_.net_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Node JS" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_node2_small.png) no-repeat; background-size:contain; ">
+                    </div>
+                    <div title="Microsoft .NET Core" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_.netCore_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="C++" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_c++_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Java" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_java_small.jpg) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Python" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_python_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="C" class="imgServices serviceBackend"
+                        style="background: url(img/technologies/back_c_small.jpg) no-repeat; background-size:contain;">
+                    </div>
+                    <!-- Frontend -->
+                    <div title="Angular" class="imgServices serviceFrontend" 
+                        style="background: url(img/technologies/front_angular_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="JQuery" class="imgServices serviceFrontend"
+                        style="background: url(img/technologies/front_jquery_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="React" class="imgServices serviceFrontend"
+                        style="background: url(img/technologies/front_react_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Bootstrap" class="imgServices serviceFrontend"
+                        style="background: url(img/technologies/front_bootstrap_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="HTML5, CSS3 y Javascript" class="imgServices serviceFrontend"
+                        style="background: url(img/technologies/front_htmlcssjs_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <!-- DevOps -->
+                    <div title="Amazon Web Services (AWS)" class="imgServices serviceDevops"
+                        style="background: url(img/technologies/cloud_aws_small.jpg) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Azure DevOps" class="imgServices serviceDevops"
+                        style="background: url(img/technologies/cloud_AzureDevOps.webp) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Docker" class="imgServices serviceDevops"
+                        style="background: url(img/technologies/cloud_docker.webp) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Jenkins" class="imgServices serviceDevops"
+                        style="background: url(img/technologies/cloud_jenkins_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <div title="Kubernetes (K8)" class="imgServices serviceDevops"
+                        style="background: url(img/technologies/cloud_kubernetes_small.png) no-repeat; background-size:contain;">
+                    </div>
+                    <!-- Apps móviles -->
+                    <div title="React Native" class="imgServices serviceMovile"
+                        style="background: url(img/technologies/movile_reactNative_small.jpg) no-repeat; background-size:contain;">
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="w-100 h-100 bg-dark text-white" id="contact">
         <div class="container h-100">
@@ -255,15 +295,18 @@
         };
 
         function showServices(serviceId, serviceTitleId) {
-            if (serviceId === "all") {
-                $(".service-item, .servicesThumbnails").show(400);
-            } else {
-                $(".service-item, .servicesThumbnails").hide(400);
-                $("#" + serviceId + ", ." + serviceId).show(400);
+            if(serviceId == "all"){
+                $(".imgServices").show(800);
+                $(".cardTechnology").hide(500);
             }
-
-            $(".list-service-titles").removeClass("active");
-            $("#" + serviceTitleId).addClass("active");
+            else{
+                $(".imgServices").hide(500);
+                $(".cardTechnology").hide(500);
+                $("#" + serviceId + ", ." + serviceId).show(600);
+            }
+            
+            // $(".list-service-titles").removeClass("active");
+            // $("#" + serviceTitleId).addClass("active");
         }
 
         function elementIsInViewport(element) {
@@ -313,7 +356,21 @@
                 });
             });
 
-        })
+        });
+        $('.buttonTech').html((i, html) => {
+            var textSplited = $.trim(html).split('');
+            var newHtmlForText = '<span><i>';
+            textSplited.forEach(function(element) {
+                if(element == ' ')
+                {
+                    newHtmlForText = newHtmlForText + '&nbsp;</i><i>';
+                }
+                else{
+                    newHtmlForText = newHtmlForText + element + '</i><i>';
+                }
+            });
+            return newHtmlForText
+        });
     </script>
 </body>
 
