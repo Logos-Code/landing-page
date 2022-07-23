@@ -44,7 +44,8 @@ $("#contactForm").on("submit", (evt) => {
         method: "POST",
         headers: {
             "Access-Control-Allow-Origin": "https://logoscode.com.mx",
-            "Access-Control-Allow-Headers": "*"
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Allow-Methods": "POST, OPTIONS"
         },
         crossDomain: true,
         url: "https://landing-contact-email.logoscode.com.mx/send",
