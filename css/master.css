@@ -107,9 +107,10 @@ body {
 
 .cardTechnology {
 	margin: 5px;
-	padding: 5px;
+	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 4px;
+	border-radius: 10px;
+	border: solid 1px #FFB404;
 }
 .notVisible {
 	display: none;
@@ -120,7 +121,7 @@ body {
 	width: 150px; 
 	margin: 5px;
 }
-
+/* starts css for services buttons */
 .buttonTech {
 --text: #fff;
 --font-size: 16px;
@@ -153,7 +154,7 @@ transition: box-shadow var(--duration) ease, -webkit-transform var(--duration) e
 transition: transform var(--duration) ease, box-shadow var(--duration) ease;
 transition: transform var(--duration) ease, box-shadow var(--duration) ease, -webkit-transform var(--duration) ease;
 }
-/* starts css for services buttons */
+
 .buttonTech span {
 display: flex;
 overflow: hidden;
