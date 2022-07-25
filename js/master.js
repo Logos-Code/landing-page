@@ -43,7 +43,7 @@ $("#contactForm").on("submit", (evt) => {
     $.ajax({
         method: "POST",
         headers: {
-            "Access-Control-Allow-Origin": "https://logoscode.com.mx,https://www.logoscode.com.mx",
+            "Access-Control-Allow-Origin": "https://logoscode.com.mx",
             "Access-Control-Allow-Headers": "*",
             "Access-Control-Allow-Methods": "POST, OPTIONS",
             "x-api-key": "1bpAxFhJ8U6TutlEmucOLNUWzqsnrtp7bMDVoeVf"
