@@ -50,6 +50,7 @@ $("#contactForm").on("submit", (evt) => {
         },
         crossDomain: true,
         url: "https://landing-contact-email.logoscode.com.mx/send",
+        dataType: "json",
         contentType: "application/json",
         data: JSON.stringify({
             name: $("#contactName").val(),
