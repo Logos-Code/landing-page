@@ -13,7 +13,7 @@ jobs:
 
       - name: Minify files
         run: |
-          sudo apt-get update && sudo apt-get -y install moreutils
+          sudo apt-get update && sudo apt-get -y install minify moreutils
           minify ./js/master.js | sponge ./js/master.js
           minify ./css/master.css | sponge ./css/master.css
           minify ./css/bootstrap.css | sponge ./css/bootstrap.css
