@@ -42,6 +42,7 @@ $("#contactForm").on("submit", (evt) => {
 
     $.ajax({
         method: "POST",
+        dataType : "json",
         headers: {
             "Access-Control-Allow-Origin": "https://www.logoscode.com.mx",
             "Access-Control-Allow-Headers": "*",
