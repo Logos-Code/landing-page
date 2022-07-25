@@ -43,10 +43,10 @@ $("#contactForm").on("submit", (evt) => {
     $.ajax({
         method: "POST",
         headers: {
-            "Access-Control-Allow-Origin": "https://logoscode.com.mx",
+            "Access-Control-Allow-Origin": "https://www.logoscode.com.mx",
             "Access-Control-Allow-Headers": "*",
             "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "x-api-key": "1bpAxFhJ8U6TutlEmucOLNUWzqsnrtp7bMDVoeVf"
+            "x-api-key": "uyfjm8fJRw7tjS0ebcFPm7H9RcG0VgIh9nkgRzVa"
         },
         crossDomain: true,
         url: "https://landing-contact-email.logoscode.com.mx/send",

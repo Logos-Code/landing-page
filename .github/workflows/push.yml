@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Minify files
+        run: |
+          sudo apt-get -y install moreutils
+          minify ./js/master.js | sponge ./js/master.js
+          minify ./css/master.css | sponge ./css/master.css
+          minify ./css/bootstrap.css | sponge ./css/bootstrap.css
+          minify index.html | sponge index.html
+        shell: bash
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
