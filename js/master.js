@@ -45,7 +45,8 @@ $("#contactForm").on("submit", (evt) => {
         headers: {
             "Access-Control-Allow-Origin": "https://logoscode.com.mx",
             "Access-Control-Allow-Headers": "*",
-            "Access-Control-Allow-Methods": "POST, OPTIONS"
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "x-api-key": "1bpAxFhJ8U6TutlEmucOLNUWzqsnrtp7bMDVoeVf"
         },
         crossDomain: true,
         url: "https://landing-contact-email.logoscode.com.mx/send",
@@ -65,5 +66,3 @@ $("#contactForm").on("submit", (evt) => {
         $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
     });
 });
-
-// $(() => { });
