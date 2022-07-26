@@ -17,6 +17,10 @@ body {
 	overflow: hidden;
 }
 
+.text-shadow {
+	text-shadow: 3px 3px 3px black;
+}
+
 #overlay {
 	z-index: 999999;
 	position: fixed;
