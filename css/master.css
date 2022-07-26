@@ -5,53 +5,27 @@ body {
 	border: 0;
 	width: 100%;
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
 	scroll-behavior: smooth;
+	background-color: black;
 }
 
-#home {
-	position: relative;
-	background-color: black;
-	height: 100%;
-	min-height: 25rem;
-	width: 100%;
+.no-overflow {
 	overflow: hidden;
 }
 
-#home video {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: 0;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+#overlay {
+	z-index: 999999;
+	position: fixed;
+	background-color: black;
 }
 
-#home .container {
-	position: relative;
-	z-index: 2;
-}
-
-#home .overlay {
+#homeVideo {
+	object-fit: cover;
 	position: absolute;
-	top: 0;
-	left: 0;
 	height: 100%;
 	width: 100%;
-	opacity: 0.5;
-	z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
-	#home video {
-		display: none;
-	}
+	top: 0;
+	left: 0;
 }
 
 #potencyText:before {
@@ -234,3 +208,36 @@ transition-delay: 0.55s;
 --m: calc(var(--font-size));
 }
 /* finish css for services buttons */
+
+@media (min-width: 576px) {
+	.h-sm-75 {
+	  height: 75% !important;
+	}
+	.h-sm-100 {
+	  height: 100% !important;
+	}
+  }
+  @media (min-width: 768px) {
+	.h-md-75 {
+	  height: 75% !important;
+	}
+	.h-md-100 {
+	  height: 100% !important;
+	}
+  }
+  @media (min-width: 992px) {
+	.h-lg-75 {
+	  height: 75% !important;
+	}
+	.h-lg-100 {
+	  height: 100% !important;
+	}
+  }
+  @media (min-width: 1200px) {
+	.h-xl-75 {
+	  height: 75% !important;
+	}
+	.h-xl-100 {
+	  height: 100% !important;
+	}
+  }

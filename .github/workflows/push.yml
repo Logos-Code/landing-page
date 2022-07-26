@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Minify files
+        run: |
+          sudo apt-get update && sudo apt-get -y install minify moreutils
+          minify ./js/master.js | sponge ./js/master.js
+          minify ./css/master.css | sponge ./css/master.css
+          minify ./css/bootstrap.css | sponge ./css/bootstrap.css
+          minify index.html | sponge index.html
+        shell: bash
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -19,4 +28,4 @@ jobs:
           aws-region: us-east-1
           
       - name: Deploy
-        run: aws s3 sync . s3://logoscode.com.mx --exclude ".git/*" --exclude ".github/*" --delete --only-show-errors
+        run: aws s3 sync . s3://www.logoscode.com.mx --exclude ".git/*" --exclude ".github/*" --exclude ".gitignore" --exclude "css/bootstrap.css.map" --exclude "css/bootstrap.scss" --delete --only-show-errors

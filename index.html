@@ -14,8 +14,7 @@
 
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <style>
@@ -23,7 +22,7 @@
     </style>
 </head>
 
-<body class="bg-dark" data-spy="scroll" data-target="#navbar" data-offset="50">
+<body class="text-white bg-dark" data-spy="scroll" data-target="#navbar" data-offset="50">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent" id="navbar">
         <a class="navbar-brand p-0" href="#home">
             <img id="navbarLogo" style="display: none" src="./img/logoscodehorizontal.png" height="30" alt="">
@@ -36,24 +35,66 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-pills ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Inicio</a>
+                    <a class="nav-link text-white" href="#home">Inicio</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#us">Nosotros</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Servicios</a>
+                    <a class="nav-link text-white" href="#services">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contacto</a>
+                    <a class="nav-link text-white" href="#contact">Contacto</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <div id="overlay" class="w-100 h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center text-center">
+                <div class="col">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                    </div>
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                    </div>
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Cargando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="w-100 h-100" id="home">
-        <div class="overlay" style="background-color: black;"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <video class="w-100 h-100" autoplay loop playsinline muted id="homeVideo" oncanplay="$('#overlay').hide(500);">
+            <source src="./img/home_bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="container h-100" id="homeContainer">
+            <div class="row h-100 text-center align-items-center">
+                <div class="col">
+                    <img id="homeLogo" src="./img/logologoscode.png" class="img-fluid w-25 mb-5">
+
+                    <p id="homePrimaryText" class="h3 text-uppercase font-weight-bolder text-primary mt-5">
+                        Desarrollo, arquitectura y automatización
+                    </p>
+                    <p class="h4 text-uppercase mb-5">
+                        para potenciar tu <span class="h4 font-weight-bolder" id="potencyText"></span>
+                    </p>
+
+                    <button class="btn btn-primary btn-lg mt-5"
+                        onclick="scrollToSection('#contact')">Contáctanos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="w-100 h-100" id="home">
+        <div class="overlay"></div>
+        <video autoplay loop muted playsinline>
             <source src="./img/home_bg.mp4" type="video/mp4">
         </video>
 
@@ -74,7 +115,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- <section class="w-100 h-100" style="background-color: #0e1318;" id="us">
         <div class="container-fluid h-100">
@@ -243,10 +284,10 @@
                             </div>
                         </div>
                         <form id="contactForm">
-                            <div class="row h-75 bg-light p-5 rounded border shadow-lg">
-                                <div class="col">
+                            <div class="row h-75 bg-light p-2 p-sm-3 p-md-4 p-lg-5 rounded border shadow-lg">
+                                <div class="col-12 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contactName" placeholder="Nombre">
+                                        <input type="text" class="form-control" id="contactName" placeholder="Nombre" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control" id="contactEmail" placeholder="Correo">
@@ -256,14 +297,17 @@
                                             placeholder="Teléfono">
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary w-100"
-                                        id="contactSubmitBtn">Enviar</button>
+                                    <button type="submit"
+                                        class="btn btn-primary w-100 d-none d-sm-block">Enviar</button>
                                 </div>
-                                <div class="col">
-                                    <div class="form-group h-100">
-                                        <textarea class="form-control h-100" id="exampleFormControlTextarea1"
-                                            placeholder="Mensaje"></textarea>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group h-sm-100">
+                                        <textarea class="form-control h-sm-100" id="contactMessage"
+                                            placeholder="Mensaje" rows="5" required></textarea>
                                     </div>
+
+                                    <button type="submit"
+                                        class="btn btn-primary w-100 d-block d-sm-none">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -273,100 +317,9 @@
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"
-        integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script>
-        function scrollToSection(element) {
-            $("html, body").animate({
-                scrollTop: $(element).offset().top
-            }, 1000);
-        };
-
-        function showServices(serviceId, serviceTitleId) {
-            if (serviceId == "all") {
-                $(".imgServices").show(800);
-                $(".cardTechnology").hide(500);
-            }
-            else {
-                $(".imgServices").hide(500);
-                $(".cardTechnology").hide(500);
-                $("#" + serviceId + ", ." + serviceId).show(600);
-            }
-
-            // $(".list-service-titles").removeClass("active");
-            // $("#" + serviceTitleId).addClass("active");
-        }
-
-        function elementIsInViewport(element) {
-            return ($(window).scrollTop() - $(element).offset().top - $(element).height() < 0);
-        }
-
-        $(window).scroll(function () {
-            if (elementIsInViewport("#homeLogo")) {
-                $("#navbarLogo").hide(1000);
-            } else {
-                $("#navbarLogo").show(1000);
-            }
-        });
-
-        if (!elementIsInViewport("#homeLogo")) {
-            $("#navbarLogo").show();
-        }
-
-        $(".nav-link").click(function () {
-            var sectionTo = $(this).attr("href");
-            scrollToSection(sectionTo);
-        });
-
-        $("#contactForm").submit((evt) => {
-            evt.preventDefault();
-
-            $("#contactForm").submit((evt) => {
-                evt.preventDefault();
-
-                $.ajax({
-                    method: "POST",
-                    headers: { 'x-api-key': "a2U8wMJcKgaetboBcutphakT3nfisN7Q8uXL2nQS" },
-                    url: "https://landing-contact-email.logoscode.com.mx/send",
-                    data: {
-                        name: $("#contactName").val(),
-                        email: $("#contactEmail").val(),
-                        cellphone: $("#contactCellphone").val()
-                    }
-                }).done((data, textStatus, jqXHR) => {
-                    console.log(data, textStatus, jqXHR);
-                }).fail((jqXHR, textStatus, errorThrown) => {
-                    console.log(jqXHR, textStatus, errorThrown);
-                }).always(() => {
-                    document.getElementById("contactForm").reset();
-
-                    $("#contactSubmitBtn").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
-                });
-            });
-
-        });
-        $('.buttonTech').html((i, html) => {
-            var textSplited = $.trim(html).split('');
-            var newHtmlForText = '<span><i>';
-            textSplited.forEach(function (element) {
-                if (element == ' ') {
-                    newHtmlForText = newHtmlForText + '&nbsp;</i><i>';
-                }
-                else {
-                    newHtmlForText = newHtmlForText + element + '</i><i>';
-                }
-            });
-            return newHtmlForText
-        });
-    </script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/notify.min.js"></script>
+    <script src="./js/master.js"></script>
 </body>
 
 </html>

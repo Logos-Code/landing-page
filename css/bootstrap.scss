@@ -1,0 +1,20 @@
+/* change the colors */
+$primary: #e1b755;
+
+.b-rt-0 {
+	border-top-right-radius: 0 !important;
+}
+
+.b-rb-0 {
+	border-bottom-right-radius: 0 !important;
+}
+
+.b-lt-0 {
+	border-top-left-radius: 0 !important;
+}
+
+.b-lb-0 {
+	border-bottom-left-radius: 0 !important;
+}
+
+@import "./bootstrap-4.6.1/scss/bootstrap.scss";
