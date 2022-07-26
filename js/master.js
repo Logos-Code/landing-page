@@ -5,15 +5,18 @@ function scrollToSection(element) {
 };
 
 function showServices(serviceId, serviceTitleId) {
-    if (serviceId === "all") {
-        $(".service-item, .servicesThumbnails").show(400);
-    } else {
-        $(".service-item, .servicesThumbnails").hide(400);
-        $("#" + serviceId + ", ." + serviceId).show(400);
+    if (serviceId == "all") {
+        $(".imgServices").show(800);
+        $(".cardTechnology").hide(500);
+    }
+    else {
+        $(".imgServices").hide(500);
+        $(".cardTechnology").hide(500);
+        $("#" + serviceId + ", ." + serviceId).show(600);
     }
 
-    $(".list-service-titles").removeClass("active");
-    $("#" + serviceTitleId).addClass("active");
+    // $(".list-service-titles").removeClass("active");
+    // $("#" + serviceTitleId).addClass("active");
 }
 
 function elementIsInViewport(element) {
@@ -67,4 +70,18 @@ $("#contactForm").on("submit", (evt) => {
 
         $("#contactForm").notify("Gracias por tu mensaje", { position: "top center", className: "success" });
     });
+});
+
+$('.buttonTech').html((i, html) => {
+    var textSplited = $.trim(html).split('');
+    var newHtmlForText = '<span><i>';
+    textSplited.forEach(function (element) {
+        if (element == ' ') {
+            newHtmlForText = newHtmlForText + '&nbsp;</i><i>';
+        }
+        else {
+            newHtmlForText = newHtmlForText + element + '</i><i>';
+        }
+    });
+    return newHtmlForText
 });
