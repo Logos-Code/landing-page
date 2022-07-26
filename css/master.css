@@ -6,8 +6,15 @@ body {
 	width: 100%;
 	height: 100%;
 	scroll-behavior: smooth;
-	background-color: black;
 }
+
+body {
+	background: url("../img/fondo_stars_blue.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+  }
 
 .no-overflow {
 	overflow: hidden;
@@ -39,18 +46,23 @@ body {
 	0% {
 		content: "Software"
 	}
+
 	20% {
 		content: "Infraestructura"
 	}
+
 	40% {
 		content: "Aplicación"
 	}
+
 	60% {
 		content: "Proceso"
 	}
+
 	80% {
 		content: "Idea"
 	}
+
 	100% {
 		content: "Servicio"
 	}
@@ -62,18 +74,11 @@ body {
 
 .scrollable {
 	/* position: absolute; */
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 #us {
 	background-image: url("../img/shutterstock_1935833692.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-#services {
-	background-image: url("../img/fondo_stars_blue.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -86,158 +91,167 @@ body {
 	border-radius: 10px;
 	border: solid 1px #FFB404;
 }
+
 .notVisible {
 	display: none;
 }
-.imgServices{
-	height:100px; 
-	float: left; 
-	width: 150px; 
+
+.imgServices {
+	height: 100px;
+	float: left;
+	width: 150px;
 	margin: 5px;
 }
+
 /* starts css for services buttons */
 .buttonTech {
---text: #fff;
---font-size: 16px;
---duration: .44s;
---move-hover: -4px;
---shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
---shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
---font-shadow: var(--font-size);
-float: left;
-cursor: pointer;
-margin: 5px;
-padding: 10px;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 5px;
-width: auto;
-text-align: center;
-/* font-family: 'Roboto'; */
-font-weight: 500;
-line-height: var(--font-size);
-display: block;
-outline: none;
-text-decoration: none;
-font-size: var(--font-size);
-/* letter-spacing: .5px; */
-color: var(--text);
-box-shadow: var(--shadow);
--webkit-transform: translateY(var(--y));
-			transform: translateY(var(--y));
-transition: box-shadow var(--duration) ease, -webkit-transform var(--duration) ease;
-transition: transform var(--duration) ease, box-shadow var(--duration) ease;
-transition: transform var(--duration) ease, box-shadow var(--duration) ease, -webkit-transform var(--duration) ease;
+	--text: #fff;
+	--font-size: 16px;
+	--duration: .44s;
+	--move-hover: -4px;
+	--shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+	--shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+	--font-shadow: var(--font-size);
+	float: left;
+	cursor: pointer;
+	margin: 5px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	width: auto;
+	text-align: center;
+	/* font-family: 'Roboto'; */
+	font-weight: 500;
+	line-height: var(--font-size);
+	display: block;
+	outline: none;
+	text-decoration: none;
+	font-size: var(--font-size);
+	/* letter-spacing: .5px; */
+	color: var(--text);
+	box-shadow: var(--shadow);
+	-webkit-transform: translateY(var(--y));
+	transform: translateY(var(--y));
+	transition: box-shadow var(--duration) ease, -webkit-transform var(--duration) ease;
+	transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+	transition: transform var(--duration) ease, box-shadow var(--duration) ease, -webkit-transform var(--duration) ease;
 }
 
 .buttonTech span {
-display: flex;
-overflow: hidden;
-text-shadow: 0 var(--font-shadow) 0 var(--text);
+	display: flex;
+	overflow: hidden;
+	text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
 
 .buttonTech span i {
-display: block;
--webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
-font-style: normal;
-transition: -webkit-transform var(--duration) ease;
-transition: transform var(--duration) ease;
-transition: transform var(--duration) ease, -webkit-transform var(--duration) ease;
--webkit-transform: translateY(var(--m));
-			transform: translateY(var(--m));
+	display: block;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	font-style: normal;
+	transition: -webkit-transform var(--duration) ease;
+	transition: transform var(--duration) ease;
+	transition: transform var(--duration) ease, -webkit-transform var(--duration) ease;
+	-webkit-transform: translateY(var(--m));
+	transform: translateY(var(--m));
 }
 
 .buttonTech span i:nth-child(1) {
-transition-delay: 0.05s;
+	transition-delay: 0.05s;
 }
 
 .buttonTech span i:nth-child(2) {
-transition-delay: 0.1s;
+	transition-delay: 0.1s;
 }
 
 .buttonTech span i:nth-child(3) {
-transition-delay: 0.15s;
+	transition-delay: 0.15s;
 }
 
 .buttonTech span i:nth-child(4) {
-transition-delay: 0.2s;
+	transition-delay: 0.2s;
 }
 
 .buttonTech span i:nth-child(5) {
-transition-delay: 0.25s;
+	transition-delay: 0.25s;
 }
 
 .buttonTech span i:nth-child(6) {
-transition-delay: 0.3s;
+	transition-delay: 0.3s;
 }
 
 .buttonTech span i:nth-child(7) {
-transition-delay: 0.35s;
+	transition-delay: 0.35s;
 }
 
 .buttonTech span i:nth-child(8) {
-transition-delay: 0.4s;
+	transition-delay: 0.4s;
 }
 
 .buttonTech span i:nth-child(9) {
-transition-delay: 0.45s;
+	transition-delay: 0.45s;
 }
 
 .buttonTech span i:nth-child(10) {
-transition-delay: 0.5s;
+	transition-delay: 0.5s;
 }
 
 .buttonTech span i:nth-child(11) {
-transition-delay: 0.55s;
+	transition-delay: 0.55s;
 }
 
 .buttonTech:hover {
---y: var(--move-hover);
---shadow: var(--shadow-hover);
+	--y: var(--move-hover);
+	--shadow: var(--shadow-hover);
 }
 
 .buttonTech:hover i {
---m: calc(var(--font-size) * -1);
+	--m: calc(var(--font-size) * -1);
 }
 
 .buttonTech.reverse {
---font-shadow: calc(var(--font-size) * -1);
+	--font-shadow: calc(var(--font-size) * -1);
 }
 
 .buttonTech.reverse:hover i {
---m: calc(var(--font-size));
+	--m: calc(var(--font-size));
 }
-/* finish css for services buttons */
 
 @media (min-width: 576px) {
 	.h-sm-75 {
-	  height: 75% !important;
+		height: 75% !important;
 	}
+
 	.h-sm-100 {
-	  height: 100% !important;
+		height: 100% !important;
 	}
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
 	.h-md-75 {
-	  height: 75% !important;
+		height: 75% !important;
 	}
+
 	.h-md-100 {
-	  height: 100% !important;
+		height: 100% !important;
 	}
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
 	.h-lg-75 {
-	  height: 75% !important;
+		height: 75% !important;
 	}
+
 	.h-lg-100 {
-	  height: 100% !important;
+		height: 100% !important;
 	}
-  }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
 	.h-xl-75 {
-	  height: 75% !important;
+		height: 75% !important;
 	}
+
 	.h-xl-100 {
-	  height: 100% !important;
+		height: 100% !important;
 	}
-  }
+}
