@@ -14,9 +14,6 @@ function showServices(serviceId, serviceTitleId) {
         $(".cardTechnology").hide(500);
         $("#" + serviceId + ", ." + serviceId).show(600);
     }
-
-    // $(".list-service-titles").removeClass("active");
-    // $("#" + serviceTitleId).addClass("active");
 }
 
 function elementIsInViewport(element) {
@@ -85,3 +82,11 @@ $('.buttonTech').html((i, html) => {
     });
     return newHtmlForText
 });
+
+$( window ).resize(function() {
+    if( screen.width < 576 ) {
+        $(".subtitle").removeClass("h1").addClass("h2");
+    }
+});
+
+$(window).trigger("resize");
