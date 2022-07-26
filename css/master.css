@@ -6,15 +6,12 @@ body {
 	width: 100%;
 	height: 100%;
 	scroll-behavior: smooth;
-}
-
-body {
-	background: url("../img/fondo_stars_blue.jpg") no-repeat center center fixed;
+	background: url("../img/body_bg.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-  }
+}
 
 .no-overflow {
 	overflow: hidden;
