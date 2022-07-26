@@ -217,7 +217,14 @@ body {
 	--m: calc(var(--font-size));
 }
 
+.w-35 {
+	width: 35% !important;
+}
+
 @media (min-width: 576px) {
+	.w-sm-25 {
+		width: 25% !important;
+	}
 	.h-sm-75 {
 		height: 75% !important;
 	}
