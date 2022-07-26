@@ -90,3 +90,7 @@ $( window ).resize(function() {
 });
 
 $(window).trigger("resize");
+
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
